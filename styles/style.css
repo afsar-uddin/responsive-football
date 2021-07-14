@@ -165,7 +165,6 @@ nav ul li a:hover {
     margin-bottom: 70px;
 }
 .player {
-    width: 300px;
     padding: 15px;
     box-shadow: var(--box-shadow);
     margin-bottom: 30px;
@@ -266,7 +265,7 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 /* --------------------------------
-        footer STYLE
+            FOOTER STYLE
 ---------------------------------- */
 
 footer {
@@ -297,4 +296,129 @@ footer ul li a:hover {
 footer p {
     font-size: 24px;
     text-transform: capitalize;
+}
+/****************************** --------------------------------
+                    MEDIA QUERY FOR RESPONSIVE
+---------------------------------- ******************************/
+@media screen and (max-width: 1010px) {
+    .player {
+        max-width: 250px;
+    }
+    .player figure img {
+        width: 100%;
+    }
+    .player figure {
+        width: 100%;
+        height: 213px;
+    }
+}
+@media screen and (max-width: 992px) {
+    /* banner */
+    .banner-caption h1 {
+        font-size: 38px;
+        line-height: 50px;
+    }
+    .player-info h3, .coach h3 {
+        font-size: 22px;
+    }
+    .highlights h3, .coachs-intro h2, .membership-intro h2 {
+        font-size: 28px;
+        line-height: 49px;
+    }
+    .highlights {
+        padding: 15px;
+    }
+    .copa-match .d-flex {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .match-fig {
+        width: 100%;
+        padding: 0;
+    }
+    .match-fig img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 810px) {
+    header.d-flex {
+        flex-wrap: wrap-reverse;
+        justify-content: flex-end;
+    }
+    nav ul {
+        flex-wrap: wrap;
+    }
+    nav ul li a {
+        padding: 15px;
+    }
+    .banner.d-flex {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .banner-caption {
+        max-width: 100%;
+        text-align: center;
+    }
+    .d-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+    }
+    .player {
+        max-width: 100%;
+    }
+    .player:hover figure img, .coach:hover img {
+        transform: scale(1);
+    }
+    .coachs-intro,
+    .membership-intro {
+        padding-left: 15px;
+    }
+    
+}
+@media screen and (max-width: 580px) {
+    img#mesy {
+        max-width: 300px;
+    }
+    img#ball {
+        max-width: 45px;
+        transform: translateY(24px);
+    }
+    nav ul li a {
+        padding: 10px;
+    }
+    @keyframes kick {
+        0% {
+            transform: translateY(24px);
+        }
+        50% {
+            transform: translate(28px, 60px);
+        }
+        100% {
+            transform: translateY(24px);
+        }
+      }
+      .d-grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 30px;
+    }
+    footer img {
+        max-width: 250px;
+    }
+    footer p {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 320px) {
+    img#mesy {
+        max-width: 230px;
+    }
+    img#ball {
+        max-width: 25px;
+        transform: translateY(24px);
+    }
+    .banner-caption h1 {
+        font-size: 24px;
+        line-height: 36px;
+    }
 }
