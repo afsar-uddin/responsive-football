@@ -168,9 +168,10 @@ nav ul li a:hover {
     padding: 15px;
     box-shadow: var(--box-shadow);
     margin-bottom: 30px;
+    width: 300px;
 }
 .player figure {
-    width: 300px;
+    width: 100%;
     height: 256px;
     overflow: hidden;
 }
