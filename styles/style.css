@@ -341,6 +341,24 @@ footer p {
     }
 }
 @media screen and (max-width: 810px) {
+    /* common */
+    .banner {
+        margin-top: 30px;
+        padding-bottom: 45px;
+    }
+    .banner-caption {
+        padding: 0;
+    }
+    .nav-banner, 
+    .players, 
+    .copa-match, 
+    .coachs-area {
+        margin-bottom: 50px;
+    }
+    .copa-match, .membership-area {
+        padding: 50px 0;
+    }
+/* header and nav */
     header.d-flex {
         flex-wrap: wrap-reverse;
         justify-content: flex-end;
@@ -364,6 +382,7 @@ footer p {
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 30px;
     }
+    /* player */
     .player {
         max-width: 100%;
     }
