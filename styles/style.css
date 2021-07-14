@@ -15,6 +15,8 @@
     --white-color: #FFFFFF;
     --transition: 0.4s ease-in;
     --hover-text-color: #E02C6D;
+    --p-color: #6C6C6C;
+    --section-bg: #f7f7f7; 
 
 }
 /* ------------------------
@@ -48,17 +50,44 @@ ul, h1, h2, h3, p, figure {
 li {
     list-style: none;
 }
+.section-bg {
+    background-color: var(--section-bg);
+}
+.link-btn {
+    background-color: var(--link-btn-bg);
+    line-height: 24px;
+    display: inline-block;
+    padding: 10px 26px;
+    text-transform: capitalize;
+    color: var(--white-color);
+    transition: var(--transition);
+}
+.link-btn i {
+    transition: var(--transition);
+    position: relative;
+    left: 5px;
+}
+.link-btn:hover {
+    background-color: var(--link-btn-hover);
+}
+.link-btn:hover i.fa-arrow-right {
+    left: 10px;
+}
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.d-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 /* --------------------------------
     NAV STYLE
 ---------------------------------- */
 .nav-banner {
     background-color: var(--banner-bg);
     margin-bottom: 70px;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 header a {
     color: var(--white-color);
@@ -78,27 +107,21 @@ nav ul li a {
 nav ul li a:hover {
     background-color: var(--nav-link-bg);
 }
-.link-btn {
-    background-color: var(--link-btn-bg);
+.login a i {
     line-height: 24px;
-    display: inline-block;
-    padding: 10px 26px;
-    text-transform: capitalize;
-    color: var(--white-color);
+    position: relative;
+    left: -8px;
     transition: var(--transition);
 }
-.link-btn:hover {
-    background-color: var(--link-btn-hover);
+.login a:hover i {
+    left: -5px;
 }
-.login a i {
-    margin-right: 8px;
-    line-height: 24px;
-}
+
 /* --------------------------------
         BANNER STYLE
 ---------------------------------- */
+
 .banner {
-    display: flex;
     padding-bottom: 80px;
 }
 .banner-caption {
@@ -109,9 +132,7 @@ nav ul li a:hover {
     font-size: 64px;
     color: var(--white-color);
     line-height: 80px;
-}
-.banner-caption a i {
-    margin-left: 5px;
+    margin-bottom: 15px;
 }
 .banner-fig {
     position: relative;
@@ -138,9 +159,10 @@ nav ul li a:hover {
   /* --------------------------------
         PLAYERS SECTION STYLE
 ---------------------------------- */
-.players {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.players,
+.copa-match,
+.coachs-area {
+    margin-bottom: 70px;
 }
 .player {
     width: 300px;
@@ -153,22 +175,121 @@ nav ul li a:hover {
     height: 256px;
     overflow: hidden;
 }
-.player figure img {
+.player figure img,
+.coach img {
     transform: scale(1);
     transition: var(--transition);
 }
-.player:hover figure img {
+.player:hover figure img,
+.coach:hover img {
     transform: scale(1.1);
 }
-.player-info h3 {
+.player-info h3,
+.coach h3 {
     font-size: 28px;
     line-height: 40px;
     margin: 5px 0;
     transition: var(--transition);
 }
-.player:hover .player-info h3 {
+.player:hover .player-info h3,
+.coach:hover h3 {
     color: var(--hover-text-color);
 }
 .player-info p {
-    color: #6C6C6C;
+    color: var(--p-color);
+}
+  /* --------------------------------
+        COPA MATCH
+---------------------------------- */
+.copa-match,
+.membership-area {
+    padding: 70px 0;
+}
+.highlights {
+    padding-right: 32px;
+}
+.highlights h3, 
+.coachs-intro h2,
+.membership-intro h2 {
+    font-size: 43px;
+    line-height: 60px;
+    margin-bottom: 5px;
+}
+.highlights p,
+.coach p {
+    color: var(--p-color);
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+.match-fig {
+    padding: 30px;
+}
+/* --------------------------------
+        COACHES STYLE
+---------------------------------- */
+.coach {
+    text-align: center;
+}
+.coach img {
+    max-width: 100%;
+}
+/* --------------------------------
+        MEMBERSHIP STYLE
+---------------------------------- */
+.single-membership {
+    background-color: var(--white-color);
+    text-align: center;
+    padding:30px 15px;
+    margin: 15px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    top: 0;
+    transition: var(--transition);
+}
+.single-membership:hover {
+    top: -10px;
+}
+
+.single-membership h3 {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.single-membership i {
+    font-size: 54px;
+}
+
+.single-membership p {
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+/* --------------------------------
+        footer STYLE
+---------------------------------- */
+
+footer {
+    text-align: center;
+    padding: 70px 0;
+}
+footer ul {
+    margin-bottom: 15px;
+}
+footer ul li {
+    display: inline;
+    margin-right: 15px;
+}
+footer ul li a {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    line-height: 32px;
+    color: #969BAB;
+    background-color: #E7E7E8;
+    border-radius: 16px;
+}
+footer p {
+    font-size: 24px;
+    text-transform: capitalize;
 }
